@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <style> 
+         /* Dropdown Button */
+        .dropbtn {
+            color: #343a40;
+            padding: 16px;
+            background-image: url('https://cdn.wallpapersafari.com/51/19/J4fsSC.jpg');
+            font-size: 12px;
+            border: none;
+        }
+
+        /* The container <div> - needed to position the dropdown content */
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        /* Dropdown Content (Hidden by Default) */
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-image: url('https://cdn.wallpapersafari.com/51/19/J4fsSC.jpg');
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+
+        /* Links inside the dropdown */
+        .dropdown-content a {
+          color: leet-text;
+          padding: 12px 16px;
+          text-decoration: none;
+          font-size: 12px;
+          display: block;
+        }
+
+        /* Change color of dropdown links on hover */
+        .dropdown-content a:hover {background-image: url('https://cdn.wallpapersafari.com/51/19/J4fsSC.jpg');}
+
+        /* Show the dropdown menu on hover */
+        .dropdown:hover .dropdown-content {display: block;}
+
+        /* Change the background color of the dropdown button when the dropdown content is shown */
+        .dropdown:hover .dropbtn {background-color: #343a40;} 
+
+
+        .show {display:block;}
+
+        .unselectable {
+          -webkit-user-select: none;
+          -webkit-touch-callout: none;
+          -moz-user-select: none;
+          -ms-user-select: none;
+          user-select: none;
+        }
+
+      #leet-text { 
+        animation-name: changetxt;
+               -webkit-animation-iteration-count: infinite; /* Safari 4.0 - 8.0 */
+                animation-iteration-count: infinite;        
+        animation-duration: 5s; 
+      } 
+
+      #headerbg { 
+        animation-name: changebg;
+               -webkit-animation-iteration-count: infinite; /* Safari 4.0 - 8.0 */
+                animation-iteration-count: infinite;        
+        animation-duration: 5s; 
+        padding-top:92px; 
+        border-radius:8px;
+        padding-bottom:97px; 
+      } 
+      #main-text { 
+        font-size: 70px; 
+        font-family: Lucida Console;
+        text-align:center; 
+        font-weight:bold; 
+        color:#090; 
+        color:#fff;
+        padding-bottom:5px; 
+      } 
+      #sub-text { 
+        font-size:17px; 
+        font-weight:bold;
+                color:#fff;       
+        text-align:center; 
+      } 
+      
+
+      #purchase-buttons { 
+        animation-name: changebg;
+               -webkit-animation-iteration-count: infinite; /* Safari 4.0 - 8.0 */
+                animation-iteration-count: infinite;        
+        animation-duration: 5s; 
+        padding-top:5px; 
+        padding-bottom:5px; 
+      } 
+      #purchase-text { 
+        font-size: 14px; 
+        font-family: Lucida Console;
+        text-align:center; 
+        color:#090; 
+        color:#fff;
+        padding-bottom:0px; 
+      } 
+      
+
+      #login-button { 
+
+        animation-name: changebg;
+               -webkit-animation-iteration-count: infinite; /* Safari 4.0 - 8.0 */
+                animation-iteration-count: infinite;        
+        animation-duration: 5s; 
+        padding-top:5px; 
+        padding-bottom:5px; 
+      } 
+      #text { 
+        font-size: 14px; 
+        text-align:center; 
+        color:#090; 
+        color:#fff;
+        padding-bottom:0px; 
+      } 
+
+
+        .vertically {
+            height: 300px;	
+            overflow: hidden;
+            position: relative;
+        }
+        .vertically .inner {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            /* Starting position */
+            -moz-transform:translateY(40%);
+            -webkit-transform:translateY(40%);	
+            transform:translateY(40%);
+            /* Apply animation to this element */	
+            -moz-animation: vertically 5s linear infinite alternate;
+            -webkit-animation: vertically 5s linear infinite alternate;
+            animation: vertically 5s linear infinite alternate;
+        }
+        /* Move it (define the animation) */
+        @-moz-keyframes vertically {
+            0%   { -moz-transform: translateY(70%); }
+            100% { -moz-transform: translateY(0%); }
+        }
+        @-webkit-keyframes vertically {
+            0%   { -webkit-transform: translateY(70%); }
+            100% { -webkit-transform: translateY(0%); }
+        }
+        @keyframes vertically {
+            0%   { 
+            -moz-transform: translateY(70%); /* Browser bug fix */
+            -webkit-transform: translateY(70%); /* Browser bug fix */
+            transform: translateY(70%); 		
+            }
+            100% { 
+            -moz-transform: translateY(0%); /* Browser bug fix */
+            -webkit-transform: translateY(0%); /* Browser bug fix */
+            transform: translateY(0%); 
+            }
+        }
+
+      
+
+      @keyframes changebg { 
+        0% { 
+          background-color: #7289d9; 
+        } 
+        50% { 
+          background-color: #274bcc; 
+        } 
+        100% { 
+          background-color: #7289d9; 
+        } 
+      } 
+      @keyframes changetxt { 
+        0% { 
+          color: #7289d9; 
+        } 
+        50% { 
+          color: #274bcc; 
+        } 
+        100% { 
+          color: #7289d9; 
+        } 
+      } 
+
+
+    </style> 
+    
+    <link rel="stylesheet" href="css/style7.css" type="text/css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Authcord - Home</title>
+    <link rel="icon" href="https://cdn.discordapp.com/attachments/1065537413889413140/1067659222180962464/image4.png">
+    <meta property="og:image" content="https://cdn.discordapp.com/attachments/1065537413889413140/1067659222180962464/image4.png" />
+    <meta property="og:title" content="Authcord Documents">
+    <meta property="og:description" content="Authcord - Discord Hosted Key/HWID Authentication">
+    <meta property="og:url" content="https://authcord.xyz">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/slidestyle.css" type="text/css">
+
+</head>
+<body>
+
+
+
+<header>
+
+
+  <!-- Navbar -->
+  <font size = "5">
+  
+  <nav class="unselectable navbar navbar-expand-lg navbar-dark bg-dark" style="background-image: url('https://cdn.wallpapersafari.com/51/19/J4fsSC.jpg'); border-radius:8px;">
+  <a class="unselectable navbar-brand" href="#"></a>
+  <button class="unselectable navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="unselectable navbar-toggler-icon"></span>
+  </button>
+
+  <div class="unselectable collapse navbar-collapse" id="navbarNav" >
+
+    <font size = "5">
+
+    <ul class="unselectable navbar-nav">
+       
+        <li class="unselectable nav-item">
+
+        </li>
+        <li class="unselectable nav-item">
+        <img src="https://cdn.discordapp.com/attachments/1059649223961878619/1063411235594436608/tempsnip.png"
+                    width="15" />
+        </li>
+        
+      <li class="unselectable nav-item active">
+        <a class="unselectable nav-link" href="https://authcord.xyz/"> Home <span class="unselectable sr-only">(current)</span></a>
+      </li>
+      <img src="https://cdn.discordapp.com/attachments/1059649223961878619/1063411235594436608/tempsnip.png"
+                    width="20" />
+        </li>
+      <li class="unselectable nav-item">
+        <a class="unselectable nav-link" href="https://docs.authcord.xyz/"> Docs </a>
+      </li>
+      <img src="https://cdn.discordapp.com/attachments/1059649223961878619/1063411235594436608/tempsnip.png"
+                    width="20" />
+        </li>
+      <li class="unselectable nav-item">
+        <a class="unselectable nav-link" href="http://api.authcord.xyz:8080/"> API </a>
+      </li>
+      <li class="unselectable nav-item">
+        <img src="https://cdn.discordapp.com/attachments/1059649223961878619/1063411235594436608/tempsnip.png"
+            width="20" />
+      </li>
+      <li class="unselectable nav-item">
+        <a class="unselectable nav-link" href="https://discord.gg/FCQaM3Zc9Y"> Panel </a>
+      </li>
+      <img src="https://cdn.discordapp.com/attachments/1059649223961878619/1063411235594436608/tempsnip.png"
+                    width="35" />
+      </li>
+      <li class="unselectable nav-item">
+        <a class="unselectable nav-link" href="https://authcord.xyz/#pricing"> Pricing </a>
+      </li>
+      </li>
+      <img src="https://cdn.discordapp.com/attachments/1059649223961878619/1063411235594436608/tempsnip.png"
+                    width="20" />
+      </li>
+      <li class="unselectable nav-item">
+         <a class="unselectable nav-link" href="https://authcord.xyz/#faq"> FAQ </a>
+      </li>
+      
+
+    </ul>
+    
+  </div>
+  
+  </font>
+</nav>
+
+</font>
+  <!-- Navbar -->
+
+<!--status 
+<section id="status">
+<!?php 
+$file = 'http://127.0.0.1:1337/api/v1/status';
+$file_headers = @get_headers($file);
+if(!$file_headers || $file_headers[0] == 'HTTP/1.1 404 Not Found') {
+  echo '<div class="unselectable alert alert-danger" style="border-radius:8px;" role="alert">API OFFLINE</div>'
+}
+else {
+  echo '<div class="unselectable alert alert-success" style="border-radius:8px;" role="alert">API ONLINE</div>'
+}
+?>
+</section>
+-->
+
+<!-- status --> 
+
+  <!-- Jumbotron -->
+  
+  <div class="unselectable" id = "headerbg" > 
+  
+      <div id = "main-text">Authcord</div> 
+      <div id = "sub-text">Discord Hosted Authentication and Loader Service.</div> 
+  </div> 
+
+  <!-- Jumbotron -->
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Navbar end -->
+
+
+<!-- div class="unselectable text-center fw-bold" style="font-size: 25px;">API Status</div -->
+
+
+
+</header>
+
+
+
+<!-- pricing -->
+
+<section class="services spad fw-bold" id="pricing">
+
+<div class="unselectable" style="text-align: center; font-size:40px;">Pricing</div>
+<br><br><br>
+        <div class="unselectable container">
+            <div class="row">
+                <div class="unselectable col-lg-3 col-md-6 col-sm-6">
+                    <div class="services__item">
+                        <h4>Authcord Full Access (1 Month)</h4>
+                        <br>
+                        <div>
+                            • Panel access 1 month
+                            
+                        </div>
+                        <div>
+                            • API access 1 month
+                            
+                        </div>
+                        <br>
+                        <br>
+                        <div style="text-align: center;">
+                          <h4 class="mb-1 me-1" >$1.99</h4>
+                        </div>
+                        <br>
+                        <br><br>
+                        <div class="unselectable" id = "purchase-buttons" style="border-radius:7px;"> <div id = "purchase-text" data-sellix-product="63c1536093165" type="submit">Purchase</div></div> 
+                    </div>
+                </div>
+                <div class="unselectable col-lg-3 col-md-6 col-sm-6">
+                    <div class="services__item">
+                        <h4>Authcord Full Access (6 Months)</h4>
+                        <br>
+                        <div>
+                            • Panel access 6 months
+                            
+                        </div>
+                        <div>
+                            • API access 6 months
+                            
+                        </div>
+                        <br>
+                        <br><br>
+                        <div style="text-align: center;">
+                          <h4 class="mb-1 me-1" >$4.99</h4>
+                          <span class="text-danger"><s>$5.99</s></span>
+                        </div>
+                        <br>
+                        <div class="unselectable" id = "purchase-buttons" style="border-radius:7px;"> <div id = "purchase-text" data-sellix-product="63c15396966e9" type="submit">Purchase</div></div> 
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                    <div class="services__item">
+                        <h4>Authcord Full Access (1 Year)</h4>
+                        <br>
+                        <div>
+                            • Panel access 1 year
+
+                        </div>
+                        <div>
+                            • API access 1 year
+
+                        </div>
+                        <div>
+                            • Custom Loader (optional)
+
+                        </div>
+                        <br>
+                        <div style="text-align: center;">
+                          <h4 class=" mb-1 me-1" >$8.99</h4>
+                          <span class=" text-danger"><s>$10.99</s></span>
+                        </div>
+                        <br>
+                        <div class="unselectable" id = "purchase-buttons" style="border-radius:7px;"> <div id = "purchase-text" data-sellix-product="63c0b4eead88e" type="submit">Purchase</div></div> 
+                    </div>
+                </div>
+                <div class=" col-lg-3 col-md-6 col-sm-6">
+                    <div class="services__item">
+                        <h4>Authcord Full Access (Lifetime)</h4>
+                        <br>
+                        <div>
+                            • Panel access forever
+                            
+                        </div>
+                        <div>
+                            • API access forever
+                            
+                        </div>
+                        <div>
+                            • Custom Loader (optional)
+
+                        </div>
+                        <br>
+                        <div style="text-align: center;">
+                          <h4 class=" mb-1 me-1" >$18.99</h4>
+                          <span class=" text-danger"><s>$20.00</s></span>
+                        </div>
+                        <br>
+                        <div class="unselectable" id = "purchase-buttons" style="border-radius:7px;"> <div id = "purchase-text" data-sellix-product="63c0b508e082b" type="submit">Purchase</div></div> 
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!-- products end -->
+
+<!-- faq -->
+
+<br>
+<section id="faq">
+<br>
+<div class="unselectable text-center fw-bold" style="font-size: 45px;">FAQ</div>
+<br>
+<br>
+<br>
+
+
+<div id="accordion" >
+
+
+  <div class="text-center card" style="background-color: #343a40;">
+    <div class=" card-header" id="headingOne">
+      <h5 class=" mb-0">
+        <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+         What is Authcord?
+        </button>
+      </h5>
+    </div>
+    
+
+    <div id="collapseOne" class=" collapse show" aria-labelledby="headingOne" data-parent="#accordion" >
+      <div class="unselectable card-body text-center">
+      Authcord is a hardware ID (HWID) licensing system that operates through Discord. It allows you to easily and securely license your software or services to specific users based on their hardware IDs.
+      </div>
+    </div>
+  </div>
+
+  <div class="text-center card" style="background-color: #343a40;">
+    <div class=" card-header" id="headingTwo" >
+      <h5 class=" mb-0" >
+        <button class=" btn btn-link collapsed text-center" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo" >
+        Is Authcord secure?
+      </button>
+      </h5>
+    </div>
+    <div id="collapseTwo" class=" collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+      <div class="unselectable card-body  text-center">
+      Yes, Authcord is designed to be extremely secure. The hardware ID is a unique identifier for each device, and it is near impossible for anyone to fake it. Additionally, all data is transmitted over secure connections to ensure that it cannot be intercepted by third parties.
+      </div>
+    </div>
+  </div>
+
+  <div class="text-center card" style="background-color: #343a40;">
+    <div class=" card-header" id="headingThree" >
+      <h5 class=" mb-0" >
+        <button class=" btn btn-link collapsed text-center" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree" >
+        How do I get Authcord?
+      </button>
+      </h5>
+    </div>
+    <div id="collapseThree" class=" collapse" aria-labelledby="headingThree" data-parent="#accordion">
+      <div class="card-body text-center">
+      For now join our <a href="https://discord.gg/QqbhHJajEu">discord</a> and ask a CEO for assistance
+      </div>
+    </div>
+  </div>
+
+    <div class="text-center card" style="background-color: #343a40;">
+    <div class=" card-header" id="headingFour" >
+      <h5 class=" mb-0" >
+        <button class=" btn btn-link collapsed text-center" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour" >
+        What could I use Authcord for?
+      </button>
+      </h5>
+    </div>
+    <div id="collapseFour" class=" collapse" aria-labelledby="headingFour" data-parent="#accordion">
+      <div class="card-body text-center">
+      Authcord's API provides a versatile solution for authentication and authorization, ensuring the security of your desktop applications and services. It can be integrated into a wide range of applications, including desktop panels, games, game addons, scripts, and much more. The API ensures that only authorized users have access to the application and its features, preventing unauthorized use. Additionally, Authcord's API provides a way to track users based on their hardware IDs, giving valuable insights into how the application is being used and which devices are accessing it. This information can be used to improve the user experience and make informed decisions about future updates and features. With its powerful and flexible capabilities, Authcord's API is a reliable solution for securing and protecting your desktop applications and services.
+      </div>
+    </div>
+  </div>
+      <div class="text-center card" style="background-color: #343a40;">
+    <div class=" card-header" id="headingFive" >
+      <h5 class=" mb-0" >
+        <button class=" btn btn-link collapsed text-center" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive" >
+        What data does Authcord store?
+      </button>
+      </h5>
+    </div>
+    <div id="collapseFive" class=" collapse" aria-labelledby="headingFive" data-parent="#accordion">
+      <div class="card-body text-center">
+      Authcord stores user information, hardware IDs, and API keys to ensure secure authentication and authorization for users accessing the API. User information such as usernames and password hashes are used to authenticate and authorize users, while hardware IDs are used to track user activity and ensure that only authorized devices have access to the API. API keys, which are unique and encrypted, provide an additional layer of security. Authcord takes data privacy and security very seriously and implements strict standards, with all stored data protected by advanced encryption algorithms. The user information and API keys will not be shared with third-party services unless required by law. In summary, Authcord provides a secure and reliable solution for authentication and authorization, while adhering to strict data privacy and security standards.
+      </div>
+    </div>
+  </div>
+</section>
+<!-- faq --> 
+
+
+<!-- Footer -->
+<footer class=" text-center text-lg-start " >
+
+    
+  <!-- Section: Social media -->
+  <section class=" d-flex justify-content-center justify-content-lg-between p-4 ">
+  
+    <!-- Right -->
+    <div >
+      <a href="" class=" me-4 text-reset">
+        <i class=" fab fa-facebook-f"></i>
+      </a>
+      <a href="" class=" me-4 text-reset">
+        <i class=" fab fa-twitter"></i>
+      </a>
+      <a href="" class=" me-4 text-reset">
+        <i class=" fab fa-google"></i>
+      </a>
+      <a href="" class=" me-4 text-reset">
+        <i class=" fab fa-instagram"></i>
+      </a>
+      <a href="" class=" me-4 text-reset">
+        <i class=" fab fa-linkedin"></i>
+      </a>
+      <a href="" class=" me-4 text-reset">
+        <i class=" fab fa-github"></i>
+      </a>
+    </div>
+    <!-- Right -->
+  </section>
+  <!-- Section: Social media -->
+
+
+
+  <!-- Section: Links  -->
+  <section class=" ">
+    <div class="unselectable container text-center text-md-start mt-5 " >
+    
+      <!-- Grid row -->
+      <div class=" row mt-3">
+
+        <!-- Grid column -->
+        <div class=" col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+          <!-- Links -->
+          <h6 class=" text-uppercase fw-bold mb-4 text-muted">
+            Socials
+          </h6>
+          <p>
+            <a href="https://discord.gg/vQ6US7MGgy" class=" text-reset">Discord</a>
+          </p>
+          <p>
+            <a href="https://github.com/AuthCord/" class=" text-reset">Github</a>
+          </p>
+          <p>
+            <a href="https://www.youtube.com/@authcord" class=" text-reset">YouTube</a>
+          </p>
+          <p>
+            <a href="" class=" text-reset"></a>
+          </p>
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class=" col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+          <!-- Links -->
+          
+          <h6 class=" text-uppercase fw-bold mb-4 text-muted">
+            API
+          </h6>
+          <p>
+            <a href="https://docs.authcord.xyz/" class=" text-reset">Documentation</a>
+          </p>
+          <p>
+            <a href="https://github.com/AuthCord/ExampleAuthenticationSystems" class=" text-reset">Examples</a>
+          </p>
+          <p>
+            <a href="http://api.authcord.xyz:8080/" class=" text-reset">API</a>
+          </p>
+          
+          
+
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class=" col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4 ">
+          <!-- Links -->
+          <h6 class=" text-uppercase fw-bold mb-4 text-muted">
+            More Pages
+          </h6>
+          <p>
+            <a href="https://authcord.xyz/#pricing" class=" text-reset">Pricing</a>
+          </p>
+          <p>
+            <a href="https://authcord.xyz/#faq" class=" text-reset">FAQ</a>
+          </p>
+          
+        </div>
+        
+        <!-- Grid column -->
+      </div>
+      <!-- Grid row -->
+    </div>
+    
+  </section>
+  <!-- Section: Links  -->
+
+  <!-- Copyright -->
+  <div class=" text-center p-4 text-muted" style="background-color: rgba(0, 0, 0, 0.05);">
+  
+    ©2023 Copyright:
+    <a class=" text-reset fw-bold text-muted" href="">Authcord</a>
+  </div>
+  <!-- Copyright -->
+  
+</footer>
+
+<!-- Footer -->
+
+<script src="https://cdn.sellix.io/static/js/embed.js"></script>
+
+
+
+</body>
+</html>
