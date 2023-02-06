@@ -1,0 +1,5 @@
+# AuthCord-BackEnd
+BackEnd Ips of AuthCord.xyz
+
+
+# Shitty auth which has a discord bot as a panel for paid users..
